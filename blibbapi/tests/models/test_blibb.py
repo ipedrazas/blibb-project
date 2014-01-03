@@ -17,7 +17,8 @@ class TestCollectionModel(unittest.TestCase):
 
     def setUp(self):
         # self.db_fd, app.config['DATABASE'] = tempfile.mkstemp()
-        test_sql = 'sqlite:///test_db.sql'
+        # test_sql = 'sqlite:///test_db.sql'
+        test_sql = 'postgresql://postgres:postgres@192.168.33.10/test_db'
         self.engine = get_engine(test_sql)
         self.db = init_db(self.engine, Base)
         self.db_session = get_db_session(self.engine)
