@@ -1,9 +1,9 @@
 
 from sqlalchemy import Column, Integer, String, Float
 
-from blibb.db import Base
+from blibbapi.db import Base
 
-class Collection(Base):
+class Collecti-apion(Base):
 
     __tablename__ = 'blibb_collection'
 
