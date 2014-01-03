@@ -1,0 +1,14 @@
+Flask
+Flask-SQLAlchemy
+MarkupSafe
+SQLAlchemy
+Werkzeug
+gevent
+greenlet
+gunicorn
+itsdangerous
+mock
+pss
+requests
+wsgiref
+
