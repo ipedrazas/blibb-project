@@ -3,7 +3,7 @@ from sqlalchemy import Column, Integer, String, Float
 
 from blibbapi.db import Base
 
-class Collecti-apion(Base):
+class Collection(Base):
 
     __tablename__ = 'blibb_collection'
 

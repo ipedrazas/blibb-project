@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 This package contains a :blibb flask app RESTFul api
 

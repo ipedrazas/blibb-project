@@ -8,7 +8,7 @@ This script creates all the models in the defined sql database
 import os
 import argparse
 
-from blibb.db import init_db, get_engine, Base
+from blibbapi.db import init_db, get_engine, Base
 
 def main():
     parser = argparse.ArgumentParser(description='Create the data base for :blibb.')

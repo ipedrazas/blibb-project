@@ -1,6 +1,6 @@
 from flask import jsonify
 
-from blibb import my_app
+from blibbapi import my_app
 
 class InvalidUsage(Exception):
     status_code = None

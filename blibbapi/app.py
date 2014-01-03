@@ -9,15 +9,7 @@ This flask app exposes some restful api endpoints for :blibb
 
 from flask import render_template, send_from_directory
 
-from blibb-api import my_app
-
-from food_trucks.resources.food_trucks_view import FoodTruckAPI
-
-def define_urls(app):
-    food_truck = FoodTruckAPI.as_view('food_trucks')
-    app.add_url_rule('/food_trucks', view_func=food_truck, methods=['GET',])
-    app.add_url_rule('/food_trucks/<int:truck_id>', view_func=food_truck, methods=['GET',])
-    app.add_url_rule('/', view_func=food_truck, methods=['GET',])
+from blibbapi import my_app
 
 
 @my_app.teardown_appcontext
