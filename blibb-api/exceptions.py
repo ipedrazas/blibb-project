@@ -1,6 +1,6 @@
 from flask import jsonify
 
-from food_trucks import my_app
+from blibb import my_app
 
 class InvalidUsage(Exception):
     status_code = None

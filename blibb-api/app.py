@@ -3,13 +3,13 @@ Flask Documentation:     http://flask.pocoo.org/docs/
 Jinja2 Documentation:    http://jinja.pocoo.org/2/documentation/
 Werkzeug Documentation:  http://werkzeug.pocoo.org/documentation/
 
-This flask app exposes some restful api endpoints for food truck discovery. 
+This flask app exposes some restful api endpoints for :blibb
 
 """
 
 from flask import render_template, send_from_directory
 
-from food_trucks import my_app
+from blibb-api import my_app
 
 from food_trucks.resources.food_trucks_view import FoodTruckAPI
 
