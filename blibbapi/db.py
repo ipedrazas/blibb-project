@@ -19,7 +19,7 @@ def init_db(engine, Base):
     # import all modules here that might define models so that
     # they will be registered properly on the metadata.  Otherwise
     # you will have to import them first before calling init_db()
-    from blibbapi.models.blibb import Collection, Item
+    from blibbapi.models.blibb import Collection, Item, User
     Base.metadata.create_all(bind=engine)
 
 Base = declarative_base()
