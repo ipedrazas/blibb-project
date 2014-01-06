@@ -14,20 +14,23 @@ from blibbapi.models.blibb import User
 
 
 class TestUserModel(unittest.TestCase):
+    def cleanup(self):
+        self.db_session.execute("truncate users cascade")
+        self.db_session.commit()
+
     def setUp(self):
         test_sql = 'postgresql://postgres:postgres@localhost/test_db'
         self.engine = get_engine(test_sql)
         self.db = init_db(self.engine, Base)
         self.db_session = get_db_session(self.engine)
+        self.cleanup()
 
     def tearDown(self):
-        self.db_session.execute("truncate users")
-        self.db_session.commit()
+        self.cleanup()
         self.db_session.remove()
 
     def test_basic(self):
         user = User(name='Ivan', fullname='Ivan Pedrazas', password='mipassword')
-
         self.db_session.add(user)
         self.db_session.commit()
 
